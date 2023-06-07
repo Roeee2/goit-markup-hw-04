@@ -14,7 +14,7 @@
 body {
   font-family: "Roboto", "Arial", "sans-serif";
   color: #212121;
-  background-color: #e5e5e5;
+  background-color: var(--white);
   justify-content: center;
   margin: 0 auto;
 }
@@ -23,6 +23,7 @@ body {
   margin-inline: auto;
 }
 .header-container {
+  display: flex;
   width: 1600px;
   margin-inline: auto;
 }
@@ -69,6 +70,10 @@ a:focus {
   padding: 5px 0;
   margin-left: 371px;
 }
+.contact-spacing svg {
+  vertical-align: middle;
+  margin-right: 10px;
+}
 .contact-spacing a {
   margin-left: 50px;
   color: var(--text-color);
@@ -82,12 +87,17 @@ a:focus {
 
 .solutions {
   color: var(--white);
-  background-color: var(--h1-background);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
+    url(./../images/header_background.jpg);
+  background-size: cover;
+  background-position: center;
   height: 600px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-inline: auto;
+  width: 1600px;
 }
 
 .solutions .content {
@@ -128,6 +138,15 @@ a:focus {
 }
 .solutions-box-container {
   width: 270px;
+}
+.solutions-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  text-align: center;
+  background: var(--button-grey);
 }
 .whatwedo-title {
   font-weight: 700;
@@ -320,4 +339,8 @@ a:focus {
 .order-service:hover a,
 .order-service:focus a {
   color: var(--white6alpha);
+}
+.smartphone:hover,
+.smartphone:focus {
+  fill: var(--web-studio-blue);
 }
